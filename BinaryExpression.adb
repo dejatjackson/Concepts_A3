@@ -1,29 +1,39 @@
 with Ada.Characters.Handling; use Ada.Characters.Handling
   
 package body BinaryExpression is
-
-   function new_book(author: in String; title: in String; pages: in PAGES) is
+   
+   function Binary_Expression(op: in arithmetic_operator, expr1: in arithmetic_expression, epr2: in arithmetic_expression) return Binary_Expression is 
+     
+      BE: Binary_Expression;
       
-      b: B1;
    begin
-      b.author (1 .. author.length) := author;
-      b.title (1 .. title.length) := title;
-      b.pages := pages;
       
-      return b;
-   end new_book;
+      if(op == null)
+        
+      BE.op := op;
+      BE.expr1 := expr1;
+      BE.expr2 := expr2;
+      return BE;
+    end Binary_Expression;
+
+  function Day (D: in Date) return Day_Num is
+  
+    begin
+      return D.D;
+    end Day;
+
+  function Month (D: in Date) return Month_Num is
+  
+    begin
+      return D.M;
+    end Month;
+
+  function Year (D: in Date) return Year_Num is
+  
+    begin
+      return D.Y;
+    end Year;
+      
+        
    
-   function get_author(a: in B1) return String is
-      return a.author;
-   end get_author;
-   
-   function get_title(a: in B1) return String is
-      return a.title;
-   end get_title;
-   
-   function get_pages(a: in B1) return PAGES is
-      return a.pages;
-   end get_pages;
-   
-   
-end book;
+end BinaryExpression;
