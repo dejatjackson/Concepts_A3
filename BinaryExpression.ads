@@ -1,4 +1,4 @@
-package book is
+package BinaryExpression is
 
    type BE is private;
    
