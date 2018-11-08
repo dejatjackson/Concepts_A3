@@ -1,0 +1,26 @@
+package body memory is
+
+   procedure store (ch: in Character, value: in Integer, mem(indexOf(ch)): out Integer) is
+      mem(ch) := value;
+   end store
+     
+   function indexOf (ch: Character) return Integer is
+      begin
+      if !Ada.Characters.Handling.Is_Letter(ch) then
+         raise Data_Error;
+      end if
+        
+        index: Integer
+      if ch in Lowercase then
+         index := ch - 'a';
+      else
+         index := 26 + ch - 'A';
+      end if 
+      return index;
+   end indexOf
+     
+   function fetch (ch: Character) return Integer is 
+   begin
+      return mem(IndexOf(ch));
+   end fetch
+end memory;

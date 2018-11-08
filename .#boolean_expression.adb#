@@ -29,21 +29,33 @@ package body boolean_expression is
          when eq_operator => 
             if BE.expr1.evaluate() == BE.expr2.evaluate() then
                result := True;
+            end if
+              
          when ne_operator => 
             if expr1.evaluate() != expr2.evaluate() then
                result := True;
+            end if
+              
          when lt_operator => 
             if expr1.evaluate() != expr2.evaluate() then
                result := True;
+            end if
+              
          when le_operator => 
             if expr1.evaluate() != expr2.evaluate() then
                result := True;
+            end if
+              
          when gt_operator => 
             if expr1.evaluate() != expr2.evaluate() then
                result := True;
+            end if
+              
          when ge_operator => 
             if expr1.evaluate() != expr2.evaluate() then
-                  result := True;
+               result := True;
+            end if
+              
          when others => raise Error;              
       end case;               
       end evaluate;   
