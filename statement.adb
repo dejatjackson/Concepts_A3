@@ -1,4 +1,6 @@
-procedure statemenr is
-begin
+package body statement is
+    
+   procedure excecute(S: in Stat); 
+
    
-end statemenr;
+end statement;
