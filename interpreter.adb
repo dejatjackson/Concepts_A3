@@ -2,6 +2,11 @@ procedure Interpreter is
 
 begin
    --  Insert code here.
-   --
-   null;
+exception
+      when
+      when
+      when
+      when
+      when
+
 end Interpreter;
