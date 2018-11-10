@@ -1,8 +1,8 @@
-with token;
+with token   use token;
 
 package iter is
 
-   type tokenArray is array (tokentype) of token.token;
+   type tokenArray is array (tokentype) of token;
    
    function getCurrent(index: in Integer, tokens: in tokenArray) return Integer;
    

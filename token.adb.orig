@@ -1,13 +1,18 @@
 package body token is
 
-   function create_token(Tk: in tokType, l: in lexeme, rN: in int, cN: in int) return tkn is
+<<<<<<< HEAD
+   
+
+end token;
+=======
+   function create_token(Tk: in tokentype, l: in String, rN: in int, cN: in int) return tkn is
     
       TK: tkn;
       
     begin
-      if(tokType is null)
+      if(tokType == null)
         //TODO
-      if(lexeme is null || lexeme.length() == 0)
+      if(lexeme == null || lexeme.length() == 0)
         //TODO
       if(rowNumber <= 0)
         //TODO
@@ -15,8 +20,8 @@ package body token is
         //TODO
          TK.tokType = tokType;
          TK.lexeme = lexeme;
-         TK.rN = rN;
-         TK.cN = cN; 
+         TK.rowNumber = rowNumber;
+         TK.colNumber = colNumber; 
      return TK;
    end create_token
      
@@ -43,3 +48,4 @@ package body token is
        return "Line Number: " + getRowNumber()+ " Lexeme Value: " + getLexeme() + "Token Type:" + getTokType();
       end getRowNumber;
 end token;
+>>>>>>> a0202b0b6262319429b1735eca0465cc67de02cb

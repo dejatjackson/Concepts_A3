@@ -1,3 +1,5 @@
+with token  use token;
+
 package body iter is
    function getCurrent(index: in Integer, tokens: in tokenArray) return token is 
    begin
@@ -26,7 +28,8 @@ package body iter is
          
       else
          return tokens(index);
-      end else;
+         end else;
+      end if;
                
    end getLast;
    
