@@ -1,0 +1,11 @@
+with token;
+
+package iter is
+
+   type tokenArray is array (tokentype) of token.token;
+   
+   function getCurrent(index: in Integer, tokens: in tokenArray) return Integer;
+   
+   function getLast(index: in Integer, tokens: in tokenArray) return token;
+
+end iter;

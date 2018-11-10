@@ -1,0 +1,14 @@
+with tokentype;
+
+package token is
+
+   type tokType is tokentype with private;
+   type lexeme is String with private;
+   type rowNumber is Integer with private;
+   type colNumber is Integer with private;
+   
+   
+      
+   
+
+end token;
