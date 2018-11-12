@@ -1,15 +1,16 @@
 package body parser is
 
    
-   function parse(P: in Parser) return Parser is
+   procedure parse(F: in filename)
    begin 
-      //TODO
+      lex = new lexicalAnalyzer(filename)//TODO
    end
      
      
    function getBlock //TODO
      begin 
       //TODO
+        match(
    end
      
    function getStatement //TODO
@@ -38,10 +39,13 @@ package body parser is
    begin 
       //TODO
    end 
-   function isValidStartofStatement() //TODO
+   function isValidStartofStatement(//TODO) return Boolean is
    begin 
-      //TODO
+       if(tok is not null)
+              raise //TODO
+       return //TODO           
    end 
+                
       function getArithmeticExpression() //TODO
    begin 
       //TODO
