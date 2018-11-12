@@ -1,8 +1,10 @@
+with token; use token;
+
 package body token is
 
-   function create_token(Tk: in tokType, l: in lexeme, rN: in int, cN: in int) return tkn is
+   function create_token(Tk: in tokType, l: in lexeme, rN: in int, cN: in int) return token is
     
-      TK: tkn;
+      TK: token;
       
     begin
       if(tokType is null)
