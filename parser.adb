@@ -11,12 +11,15 @@ with arithmetic_expression; use arithmetic_expression;
 package body parser is
 
    
-   procedure parse(F: in filename)
+   procedure parser(F: in filename)
    begin 
       lex = new lexicalAnalyzer(filename)//TODO
    end
      
-     
+   function parse(//TODO) return Program is
+   begin 
+         
+   end
    function getBlock //TODO
      begin 
       //TODO
@@ -68,32 +71,56 @@ package body parser is
    begin 
       //TODO
    end
-      function getLiteralInteger() //TODO
-   begin 
+    function getLiteralInteger(//TODO) return literal_integer
+  begin 
       //TODO
    end
-      function getId() //TODO
+   function getId(//TODO) return Id
    begin 
-      //TODO
+              tok: token; 
+              if //TODO
+              //TODO
+              return new Id(//TODO)
    end 
-      function getBooleanExpression() //TODO
+      function getBooleanExpression(//TODO ) return Booleam_expression
    begin 
-      //TODO
+              op: Relative_op;
+              op := getRelativeOperator();
+              expr1 : Arithmetic_expression;
+              expr2 : Arithmetic_expression;
+              expr1 := getArithmeticExpression();
+              expr2 := getArithmeticExpression();
+              return new Boolean_expression(op,expr1,expr2)//TODO
    end
-      function getRelationalOperator() //TODO
+      function getRelationalOperator(//TODO) return Relative_op 
+              begin 
+              op: Relative_op;
+              tok: token;
+              if //TODO then //TODO
+              elsif //TODO then  //TODO
+              elsif //TODO then  //TODO
+              elsif //TODO then  //TODO
+              elsif //TODO then  //TODO
+              elsif //TODO then  //TODO
+              else
+                    //TODO
+               return op
+   end
+     procedure match() //TODO
    begin 
+              //Note -- instead of the assert just do and if and raise
+               //TODO
+   end 
+      function getLookaheadToken(//TODO) return token
+   begin 
+      tok: token;
+      tok = null;
       //TODO
    end 
-      function match() //TODO
+      function getNextToken(//TODO) return token
    begin 
-      //TODO
-   end 
-      function getLookaheadToken() //TODO
-   begin 
-      //TODO
-   end 
-      function getNextTokenn() //TODO
-   begin 
+      tok: token;
+      tok = null;
       //TODO
    end 
 end parser;
