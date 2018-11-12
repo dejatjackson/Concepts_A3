@@ -1,3 +1,13 @@
+with boolean_expression; use boolean_expression;
+with statement; use statement;
+with Assignment_statement; use Assignment_statement;
+with block; use block;
+with while_statement; use while_statement;
+with for_statement; use for_statement;
+with print_statement; use print_statement;
+with if_statement; use if_statement;
+with arithmetic_expression; use arithmetic_expression;
+
 package body parser is
 
    
