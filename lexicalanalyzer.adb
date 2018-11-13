@@ -9,27 +9,32 @@ package body lexicalAnalyzer is
    begin 
       //TODO
    end
-   function getTokenType() //TODO
+   function getTokenType(//TODO) return tokentype is
    begin 
       //TODO
    end   
-   function allDigits() //TODO
+   function allDigits(//TODO) return boolean is
    begin 
       //TODO
-   end function getLexeme() //TODO
+   end 
+   function getLexeme(//TODO) return string is
    begin 
       //TODO
    end  
-   function skipWhiteSpace() //TODO
+   function skipWhiteSpace(//TODO) return int is
    begin 
       //TODO
    end   
-   function getLookaheadToken() //TODO
+   function getLookaheadToken(//TODO) return token is
    begin 
       //TODO
-   end  function getNextToken() //TODO
+   end  
+   function getNextToken(//TODO) return token is 
    begin 
-      //TODO
+      if //TODO then 
+         //TODO
+      return tokens.remove(0);
+
    end function getForExpression() //TODO
    begin 
       //TODO
