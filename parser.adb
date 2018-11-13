@@ -29,7 +29,7 @@ package body parser is
       while isValidStartOfStatement(tok) loop
          stmt: statement; 
          stmt:= getStatement();
-         tok = getLookaheadToken();
+         tok := getLookaheadToken();
       end loop
       return blk;
    end
@@ -136,13 +136,13 @@ package body parser is
    begin 
         expr : arithmetic_expression;
         tok: token;
-        tok = getLookaheadToken();
+        tok := getLookaheadToken();
         if tok.getTokType() == tokentype.id then //TODO
-            expr = getId();
+            expr := getId();
         elsif tok.getTokType() == tokentype.literal_integer then //TODO
-            expr = getLiteralInteger();
+            expr := getLiteralInteger();
         else
-            expr = getBinaryExpression();
+            expr := getBinaryExpression();
         return expr;
    end 
      function getBinaryExpression(//TODO) return Binary_expression is
