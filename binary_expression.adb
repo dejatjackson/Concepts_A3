@@ -1,10 +1,10 @@
 with Ada.Characters.Handling; use Ada.Characters.Handling
   
-package body BinaryExpression is
+package body binary_expression is
    
-   function Binary_Expression(op: in arithmetic_operator, expr1: in arithmetic_expression, epr2: in arithmetic_expression) return Binary_Expression is 
+   function binary_expression(op: in arithmetic_operator, expr1: in arithmetic_expression, epr2: in arithmetic_expression) return Binary_Expression is 
      
-      BE: Binary_Expression;
+      BE: binary_expression;
       
    begin
       
@@ -18,7 +18,7 @@ package body BinaryExpression is
       BE.expr1 := expr1;
       BE.expr2 := expr2;
       return BE;
-    end Binary_Expression;
+    end binary_expression;
   
   overriding
   function evaluate () return integer is
@@ -35,4 +35,4 @@ package body BinaryExpression is
          value := BE.expr1.evaluate() - BE.expr2.evaluate();
       end evaluate;   
       
-end BinaryExpression;
+end binary_expression;

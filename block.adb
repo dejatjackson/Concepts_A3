@@ -20,12 +20,12 @@ begin
       
    procedure process() is
    begin
-         Array_Loop :
+         
    for I in ar'Range loop
 
       ar[I].execute();
 
-   end loop Array_Loop;
+   end loop;
    end process;
    
    function size() return Integer is 

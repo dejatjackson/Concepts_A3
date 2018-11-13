@@ -1,8 +1,8 @@
-package BinaryExpression is
+package binary_expression is
 
    type BE is private;
    
-   function Binary_Expression (op: in arithmetic_operator; expr1: in arithmetic_expression; expr2: in arithmetic_expression)
+   function binary_eexpression (op: in arithmetic_operator; expr1: in arithmetic_expression; expr2: in arithmetic_expression)
                       return BE;
    function evaluate () return integer;
    
@@ -14,4 +14,4 @@ private
          expr2: arithmetic_expression;
       end record
 
-end BinaryExpression;
+end binary_expression;
