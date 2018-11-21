@@ -1,10 +1,33 @@
+with Ada.Text_IO;  use Ada.Text_IO;
+
 package body lexicalAnalyzer is
 
-   //TODO the constructor
-   function create_lexAnalyzer
-     begin 
-      //TODO
-   end
+   procedure create_lexAnalyzer(fileName: in String) is
+      tokens: tArray;
+      file: File_Type;
+      line: String;
+      lineNumber: Integer;
+      lineNumber := 0;
+      
+      if fileName is null then
+            raise IllegalArgumentException with "null file name argument";
+      end if;
+         
+      begin
+         Open (file => file,
+               Mode => In_File,
+               Name => fileName);
+         
+         while not End_Of_File(file) loop
+            line = Get_Line(file);
+            lineNumber += 1;
+            processline(line, lineNumber);
+         end loop;
+         
+         Close (file);
+         
+   end create_lexAnalyzer;
+     
    procedure processline() //TODo
    begin 
       //TODO
