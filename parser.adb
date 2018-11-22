@@ -81,7 +81,7 @@ package body parser is
       
    end getAssignmentStatement;
      
-   function getPrintStatement(//TODO) return Statement is
+   function getPrintStatement() return Statement is
         tok: token := getNextToken();
         match (tok, tokentype.print_tok);
         tok := getNextToken;
@@ -104,7 +104,7 @@ package body parser is
       return new while_statement (expr, blk);
    end getWhileStatement;
     
-   function getForStatement(//TODO) return Statement is
+   function getForStatement() return Statement is
         tok: token := getNextToken();
         match (tok, tokentype.for_tok); 
         blk: block := getBlock();
