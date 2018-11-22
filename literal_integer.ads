@@ -1,16 +1,14 @@
 package literal_integer is
 
    type lit_int is private;
-   
-   subtype int; //TODO
      
-   function create_lInt(I: in int) return lit_int;      
-   function evaluate(L: in lit_int) return int;
+   function create_lInt(I: in Integer) return lit_int;      
+   function evaluate(L: in lit_int) return Integer;
    
    private
    type lit_int is 
       record
-         I: int;
-      end record
+         I: Integer;
+      end record;
 
 end literal_integer;

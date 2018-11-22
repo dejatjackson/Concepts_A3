@@ -1,4 +1,6 @@
 package binary_expression is
+   
+   ParserException, LexicalExcpetion, IllegalArgumentException, FileNotFoundException: exception;
 
    type BE is private;
    

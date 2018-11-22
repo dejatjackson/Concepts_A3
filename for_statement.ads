@@ -5,6 +5,8 @@ package for_statement is
 
    type For_stat is for_statement with private;
    
+   ParserException, LexicalExcpetion, IllegalArgumentException, FileNotFoundException: exception;
+ 
    subtype B_Expression is boolean_expression with private;
    subtype Blk is block with private;
      

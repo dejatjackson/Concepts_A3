@@ -2,6 +2,8 @@ package Id is
    
    type Id_Char is private;
    
+   ParserException, LexicalExcpetion, IllegalArgumentException, FileNotFoundException: exception;
+
    subtype char is Character with private;
 
    

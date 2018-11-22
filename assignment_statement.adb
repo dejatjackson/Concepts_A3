@@ -6,11 +6,11 @@ package body assignment_statement is
       
     begin
       if ID_var is null then
-         raise Data_Error;
+         raise IllegalArgumentException with "ull Expression";
       end if;
       
       if A_Express is null then
-         raise Data_Error;
+         raise IllegalArgumentException with "null Id";
       end if;
               
          As.I = var;

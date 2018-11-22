@@ -9,9 +9,9 @@ package body binary_expression is
    begin
       
       if op == null then
-         raise Data_Error => Put("Arithmetic Operator is null");
+         raise IllegalArgumentException => Put("Arithmetic Operator is null");
       elsif expr1 == null || expr2 == null then
-         raise Data_Error => Put("Arithmetic Expression is null");
+         raise IllegalArgumentException => Put("Arithmetic Expression is null");
       end if
            
       BE.op := op;

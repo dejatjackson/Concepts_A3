@@ -10,7 +10,7 @@ package body Id is
       
     begin
       if lexicalAnalyzer.isValidIdentifier(C) is False then
-         raise Data_Error;
+         raise IllegalArgumentException with "character is not a valid identifier";
       end if;
          I = C;
          

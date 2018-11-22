@@ -13,7 +13,7 @@ begin
    procedure add(st: in statement) is
    begin
       if ar is null then 
-         raise Data_Error;
+         raise IllegalArgumentException with "null statement argument";
       end if;
    ar.add(st);    
    end add;

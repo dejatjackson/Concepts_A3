@@ -1,6 +1,8 @@
 with id; use id;
 
 package Assignment_statement is
+   
+ ParserException, LexicalExcpetion, IllegalArgumentException, FileNotFoundException: exception;
 
  type A_stat is Assignment_statement with private;
    

@@ -10,7 +10,7 @@ begin
    
    function indexOf(ch: in Character) return Integer is
    begin
-      if !Ada.Characters.Handling.Is_Letter(ch) then
+      if /Ada.Characters.Handling.Is_Letter(ch) then
          raise Data_Error;
       end if;
       

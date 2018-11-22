@@ -5,11 +5,11 @@ package body for_statement is
       
     begin
       if E is null then
-         raise Data_Error;
+         raise IllegalArgumentException with "null boolean expression";
       end if;
          
       if B is null then
-         raise Data_Error;
+         raise IllegalArgumentException with "null block";
                
          E = express;
          B = blk;

@@ -5,8 +5,8 @@ package body program is
    function create_block(blk: in block) return block is
    begin
       if blk is null then
-         raise Data_Error;
-         end if;
+         raise IllegalArgumentException with "null block";
+      end if;
          b := blk;
       
   end create_block;

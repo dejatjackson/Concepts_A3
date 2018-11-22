@@ -2,6 +2,8 @@ package if_statement is
 
    type If_stat is private;
    
+   ParserException, LexicalExcpetion, IllegalArgumentException, FileNotFoundException: exception;
+
    subtype Expression is boolean_expression with private;
    subtype Blk1 is block with private;
    subtype Blk2 is block with private;
